@@ -6,7 +6,6 @@
   margin: 0 auto;
   border-radius: 100%;
   border-top: 3px solid black;
-  border-bottom: 3px solid black;
   transition: all ease .3s;
   position: relative; }
   .btn:before {
@@ -20,12 +19,11 @@
     transition: all ease .3s; }
   .btn:hover {
     cursor: pointer;
-    transform: rotate(180deg);
+    transform: rotate(360deg);
     transition: all ease .3s;
-    border-top: 3px solid red;
-    border-bottom: 3px solid red; }
+    border-top: 3px solid red; }
   .btn:hover:before {
-    transform: rotate(-180deg);
+    transform: rotate(-360deg);
     transition: all ease .3s; }
   .btn:active, .btn:focus, .btn:visited {
     outline: none; }
