@@ -6,7 +6,6 @@
   margin: 0 auto;
   border-radius: 100%;
   border-top: 3px solid black;
-  border-bottom: 3px solid black;
   transition: all ease .3s;
   position: relative;
   &:before {
@@ -21,13 +20,12 @@
   }
   &:hover {
     cursor: pointer;
-    transform: rotate(180deg);
+    transform: rotate(360deg);
     transition: all ease .3s;
     border-top: 3px solid red;
-    border-bottom: 3px solid red;
   }
   &:hover:before {
-    transform: rotate(-180deg);
+    transform: rotate(-360deg);
     transition: all ease .3s;
   }
   &:active,
