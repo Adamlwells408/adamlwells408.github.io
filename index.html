@@ -11,7 +11,7 @@
   <section id="header">
     <div id="shadow-overlay"></div>
     <div class="text-bar">
-      My name is <button class="shadow-button" id="adam" onclick="showShadow(this.id)"><span class="font-blue">Adam</span></button>... and i'm <span class="cross-thru">skilled</span>, <span class="bold">lucky</span> enough to be marrying <button class="shadow-button" id="cass" onclick="showShadow(this.id)"><span class="font-blue">this hotty</span></button> in September!
+      My name is <button class="shadow-button" id="adam" onmouseover="showShadow(this.id)" onmouseout="hideShadow()"><span class="font-blue">Adam</span></button>... and i'm <span class="cross-thru">skilled</span>, <span class="bold">lucky</span> enough to be marrying <button class="shadow-button" id="cass" onmouseover="showShadow(this.id)" onmouseout="hideShadow()"><span class="font-blue">this hotty</span></button> in September!
     </div>
   </section>
 
@@ -23,6 +23,10 @@
     var showShadow = function(imgTarget) {
       var newBg = '/images/header-hover-'+imgTarget+'.png';
       shadowOverlay.style.background = `url(${newBg}) no-repeat top center / 100%`;
+    }
+
+    var hideShadow = function() {
+      shadowOverlay.style.background = '';
     }
 
   </script>
