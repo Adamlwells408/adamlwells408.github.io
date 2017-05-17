@@ -2,15 +2,29 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>First Git Page</title>
+  <title>I'm Adam!</title>
 
   <link rel="stylesheet" href="styles.css">
 
 </head>
 <body>
-  <p style="width: 100%; text-align: center; margin-top: 50px;">
-    Hello world, kinda new here. Give me a little bit o' time and there should be something juicy here!
-  </p>
-  <button class="btn"></button>
+  <section id="header">
+    <div id="shadow-overlay"></div>
+    <div class="text-bar">
+      My name is <button class="shadow-button" id="adam" onclick="showShadow(this.id)"><span class="font-blue">Adam</span></button>... and i'm <span class="cross-thru">skilled</span>, <span class="bold">lucky</span> enough to be marrying <button class="shadow-button" id="cass" onclick="showShadow(this.id)"><span class="font-blue">this hotty</span></button> in September!
+    </div>
+  </section>
+
+  <script type="text/javascript">
+    var buttons = document.getElementsByClassName('shadow-button'),
+        header = document.getElementById('header'),
+        shadowOverlay = document.getElementById('shadow-overlay');
+
+    var showShadow = function(imgTarget) {
+      var newBg = '/images/header-hover-'+imgTarget+'.png';
+      shadowOverlay.style.background = `url(${newBg}) no-repeat top center / 100%`;
+    }
+
+  </script>
 </body>
 </html>
