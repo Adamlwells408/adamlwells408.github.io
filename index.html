@@ -29,5 +29,13 @@
       shadowOverlay.style.background = '';
     }
   </script>
+  <script type="text/javascript">
+    window.onblur = function() {
+      document.title = 'Second Title';
+    }
+    window.onfocus = function() {
+      document.title = 'First Title';
+    }
+  </script>
 </body>
 </html>
