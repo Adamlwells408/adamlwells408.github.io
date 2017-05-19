@@ -30,8 +30,8 @@
       shadowOverlay.style.background = '';
     }
     for (var i = 0; i < buttons.length; i++) {
-      buttons.addEventListener('onmouseover', showShadow);
-      buttons.addEventListener('onmouseout', hideShadow);
+      buttons[i].addEventListener('onmouseover', showShadow);
+      buttons[i].addEventListener('onmouseout', hideShadow);
     }
   </script>
   <script type="text/javascript">
