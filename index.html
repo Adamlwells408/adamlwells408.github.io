@@ -21,11 +21,6 @@
         header = document.getElementById('header'),
         shadowOverlay = document.getElementById('shadow-overlay');
 
-    buttons.forEach(function(button) {
-      button.addEventListener('onmouseover', showShadow);
-      button.addEventListener('onmouseout', hideShadow);
-    });
-
     var showShadow = function(imgTarget) {
       var newBg = '/images/header-hover-'+imgTarget+'.png';
       shadowOverlay.style.background = `url(${newBg}) no-repeat top center / 100%`;
@@ -34,6 +29,11 @@
     var hideShadow = function() {
       shadowOverlay.style.background = '';
     }
+
+    buttons.forEach(function(button) {
+      button.addEventListener('onmouseover', showShadow);
+      button.addEventListener('onmouseout', hideShadow);
+    });
   </script>
   <script type="text/javascript">
     window.onblur = function() {
