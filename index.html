@@ -34,7 +34,8 @@
       }
 
       for (var i = 0; i < buttons.length; i++) {
-        buttons[i].addEventListener("onmouseover", showShadow(buttons[i].getAttribute('id')));
+        var id = buttons[i].getAttribute('id');
+        buttons[i].addEventListener("onmouseover", showShadow(id));
         buttons[i].addEventListener("onmouseout", hideShadow);
       }
 
