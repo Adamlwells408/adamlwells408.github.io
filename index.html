@@ -23,11 +23,13 @@
           shadowOverlay = document.getElementById('shadow-overlay');
 
       var showShadow = function(imgTarget) {
+        console.log('showing');
         var newBg = '/images/header-hover-'+imgTarget+'.png';
         shadowOverlay.style.background = `url(${newBg}) no-repeat top center / 100%`;
       }
 
       var hideShadow = function() {
+        console.log('hiding');
         shadowOverlay.style.background = '';
       }
 
