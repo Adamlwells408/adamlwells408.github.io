@@ -34,9 +34,10 @@
       }
 
       for (var i = 0; i < buttons.length; i++) {
-        var id = buttons[i].getAttribute('id');
-        buttons[i].addEventListener("onmouseover", showShadow(id));
-        buttons[i].addEventListener("onmouseout", hideShadow);
+        console.log(buttons[i]);
+//        var id = buttons[i].getAttribute('id');
+//        buttons[i].addEventListener("onmouseover", showShadow(id));
+//        buttons[i].addEventListener("onmouseout", hideShadow);
       }
 
       window.onblur = function() {
