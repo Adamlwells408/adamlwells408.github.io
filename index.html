@@ -29,11 +29,10 @@
     var hideShadow = function() {
       shadowOverlay.style.background = '';
     }
-    console.log(buttons[0]);
-//    buttons.forEach(function(button) {
-//      button.addEventListener('onmouseover', showShadow);
-//      button.addEventListener('onmouseout', hideShadow);
-//    });
+    for (var i = 0; i < buttons.length; i++) {
+      button.addEventListener('onmouseover', showShadow);
+      button.addEventListener('onmouseout', hideShadow);
+    }
   </script>
   <script type="text/javascript">
     window.onblur = function() {
