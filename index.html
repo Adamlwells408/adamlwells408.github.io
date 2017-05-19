@@ -33,8 +33,8 @@
 
       for (var i = 0; i < buttons.length; i++) {
         console.log(buttons[i]);
-        buttons[i].addEventListener("onmouseover", showShadow);
-//        buttons[i].addEventListener("onmouseout", hideShadow);
+        buttons[i].addEventListener("onmouseover", showShadow(buttons[i].getAttribute('href')));
+        buttons[i].addEventListener("onmouseout", hideShadow);
       }
 
       window.onblur = function() {
