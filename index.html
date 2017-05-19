@@ -17,31 +17,33 @@
   </section>
 
   <script type="text/javascript">
-    var buttons = document.getElementsByClassName('shadow-button'),
-        header = document.getElementById('header'),
-        shadowOverlay = document.getElementById('shadow-overlay');
+    document.ready(function() {
+      var buttons = document.getElementsByClassName('shadow-button'),
+          header = document.getElementById('header'),
+          shadowOverlay = document.getElementById('shadow-overlay');
 
-    var showShadow = function(imgTarget) {
-      var newBg = '/images/header-hover-'+imgTarget+'.png';
-      shadowOverlay.style.background = `url(${newBg}) no-repeat top center / 100%`;
-    }
+      var showShadow = function(imgTarget) {
+        var newBg = '/images/header-hover-'+imgTarget+'.png';
+        shadowOverlay.style.background = `url(${newBg}) no-repeat top center / 100%`;
+      }
 
-    var hideShadow = function() {
-      shadowOverlay.style.background = '';
-    }
+      var hideShadow = function() {
+        shadowOverlay.style.background = '';
+      }
 
-    for (var i = 0; i < buttons.length; i++) {
-      console.log(buttons[i]);
-      buttons[i].addEventListener("onmouseover", showShadow);
-      buttons[i].addEventListener("onmouseout", hideShadow);
-    }
+      for (var i = 0; i < buttons.length; i++) {
+        console.log(buttons[i]);
+        buttons[i].addEventListener("onmouseover", showShadow);
+        buttons[i].addEventListener("onmouseout", hideShadow);
+      }
 
-    window.onblur = function() {
-      document.title = 'Come back!';
-    }
-    window.onfocus = function() {
-      document.title = 'I\'m Adam';
-    }
+      window.onblur = function() {
+        document.title = 'Come back!';
+      }
+      window.onfocus = function() {
+        document.title = 'I\'m Adam';
+      }
+    });
   </script>
 </body>
 </html>
