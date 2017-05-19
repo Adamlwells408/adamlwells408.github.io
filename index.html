@@ -32,7 +32,7 @@
       }
 
       for (var i = 0; i < buttons.length; i++) {
-        console.log(buttons[i]);
+        console.log(buttons[i].getAttribute('href'));
         buttons[i].addEventListener("onmouseover", showShadow(buttons[i].getAttribute('href')));
         buttons[i].addEventListener("onmouseout", hideShadow);
       }
