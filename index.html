@@ -22,7 +22,7 @@
           shadowOverlay = document.getElementById('shadow-overlay');
 
       var showShadow = function(imgTarget) {
-        var newBg = '/images/header-hover-'+imgTarget+'.png';
+        var newBg = '/images/header-hover-'+'adam'+'.png';
         shadowOverlay.style.background = `url(${newBg}) no-repeat top center / 100%`;
       }
 
@@ -32,7 +32,7 @@
 
       for (var i = 0; i < buttons.length; i++) {
         var id = buttons[i].getAttribute('id');
-        buttons[i].addEventListener("mouseover", showShadow(id));
+        buttons[i].addEventListener("mouseover", showShadow());
 //        buttons[i].addEventListener("mouseout", hideShadow);
       }
 
