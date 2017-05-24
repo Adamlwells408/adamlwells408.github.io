@@ -21,7 +21,10 @@
       var buttons = document.getElementsByClassName('shadow-button'),
           shadowOverlay = document.getElementById('shadow-overlay');
 
-      var showShadow = function(){}
+      var showShadow = function(){
+        var newBg = '/images/header-hover-'+this.getAttribute('id')+'.png';
+        shadowOverlay.style.background = `url(${newBg}) no-repeat top center / 100%`;
+      }
 
       var hideShadow = function() {
         shadowOverlay.style.background = '';
@@ -30,12 +33,6 @@
       for (var i = 0; i < buttons.length; i++) {
         buttons[i].addEventListener("mouseover", showShadow);
         buttons[i].addEventListener("mouseout", hideShadow);
-      }
-
-      showShadow = function() {
-        console.log(this);
-        var newBg = '/images/header-hover-'+this.getAttribute('id')+'.png';
-        shadowOverlay.style.background = `url(${newBg}) no-repeat top center / 100%`;
       }
 
       window.onblur = function() {
