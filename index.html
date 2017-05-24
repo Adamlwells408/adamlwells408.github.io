@@ -22,6 +22,7 @@
           shadowOverlay = document.getElementById('shadow-overlay');
 
       var showShadow = function() {
+        console.log(this);
         var newBg = '/images/header-hover-'+this.getAttribute('id')+'.png';
         shadowOverlay.style.background = `url(${newBg}) no-repeat top center / 100%`;
       }
