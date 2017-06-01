@@ -2,6 +2,7 @@
 
 var gulp = require('gulp');
 var sass = require('gulp-sass');
+var imageResize = require('gulp-image-resize');
 
 gulp.task('sass', function () {
   return gulp.src('./sass/styles.scss')
@@ -11,4 +12,15 @@ gulp.task('sass', function () {
 
 gulp.task('sass:watch', function () {
   gulp.watch('./sass/**/*.scss', ['sass']);
+});
+
+gulp.task('resizeImages', function() {
+	gulp.src('images/*.jpg')
+		.pipe(imageResize({
+			percentage : 200,
+			upscale : true,
+			interlace : true,
+			quality : 0.3
+		}))
+		.pipe(gulp.dest('test-images'));
 });

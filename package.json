@@ -1,0 +1,22 @@
+{
+  "name": "github.dev",
+  "version": "1.0.0",
+  "description": "# adamlwells408.github.io",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Adamlwells408/adamlwells408.github.io.git"
+  },
+  "author": "Adam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Adamlwells408/adamlwells408.github.io/issues"
+  },
+  "homepage": "https://github.com/Adamlwells408/adamlwells408.github.io#readme",
+  "devDependencies": {
+    "gulp-image-resize": "^0.12.0"
+  }
+}
