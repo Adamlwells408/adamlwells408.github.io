@@ -1,0 +1,318 @@
+/**
+ * Entry point:
+ * styles/App.scss
+ * 
+ * Based off of ITCSS Architecture with a few personal changes: https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/
+ */
+/**
+ * Difference between tools & utilities
+ * 
+ * Tools does not output CSS but sets up variables and additional mixins for use later
+ * Utilities output actual CSS and implement the mixins imported earlier from Tools
+ * TODO: Possibly think of better names
+ */
+/**
+ * Order is important until you hit the utilities
+ */
+/* Breakpoints */
+/* Spacing */
+/* Layout */
+/* Colors */
+/* Font */
+/* Animations */
+/**
+ * Layout mixins
+ */
+/**
+ * Adds border to element to contain child margins.
+ * Useful for scrolling to elements whose children use margin for spacing
+ * while ensuring scroll target includes spacing created by margin
+ */
+/**
+ * Animation mixins
+ */
+/**
+ * styles/utilities/_reset.scss
+ * http://meyerweb.com/eric/tools/css/reset/
+ * v2.0 | 20110126
+ * License: none (public domain)
+ */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol,
+ul {
+  list-style: none; }
+
+blockquote,
+q {
+  quotes: none; }
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+* {
+  box-sizing: border-box;
+  color: inherit; }
+
+a,
+a:hover,
+a:visited,
+a:active,
+a:focus {
+  text-decoration: none; }
+
+/**
+ * Fonts
+ *
+ * Introduce all of your @font-face rules here.
+ * Use family-based subfolders to organize your fonts. This provides a good place to
+ * store related files- configs, licenses etc.
+ */
+html {
+  font-size: 62.5%; }
+
+body {
+  font-weight: 400;
+  position: relative;
+  overflow-x: hidden;
+  min-width: 320px;
+  margin: 0 auto;
+  font-family: Helvetica, Arial, "Lucida Grande", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background-color: #fff;
+  color: #111; }
+  body.is-locked {
+    overflow: hidden; }
+
+a {
+  cursor: pointer; }
+
+sup {
+  font-size: 0.5em;
+  vertical-align: super; }
+
+hr {
+  height: 4px;
+  margin: 0;
+  border: 0;
+  background-color: #111; }
+
+[type=text],
+[type=number],
+[type=search],
+[type=password],
+[type=email],
+[type=tel],
+[type=radio],
+[type=submit],
+select,
+textarea {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  appearance: none;
+  outline: 0; }
+  [type=text]:-ms-expand,
+  [type=number]:-ms-expand,
+  [type=search]:-ms-expand,
+  [type=password]:-ms-expand,
+  [type=email]:-ms-expand,
+  [type=tel]:-ms-expand,
+  [type=radio]:-ms-expand,
+  [type=submit]:-ms-expand,
+  select:-ms-expand,
+  textarea:-ms-expand {
+    display: none; }
+
+[type=radio] {
+  border-radius: 50%; }
+
+button {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  cursor: pointer;
+  background: none; }
+  button:disabled {
+    cursor: inherit; }
+
+i.icon {
+  display: inline-block;
+  position: relative;
+  width: 12px;
+  height: 12px; }
+  i.icon svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+
+/*-----------------------
+@HOOKS
+
+adds ability to check a breakpoint in JS
+see ww.common.checkBreakpoint() in main.js
+------------------------*/
+html {
+  font-family: "bp-mobile"; }
+
+@media (min-width: 768px) {
+  html {
+    font-family: "bp-tablet"; } }
+
+@media (min-width: 992px) {
+  html {
+    font-family: "bp-desktop"; } }
+
+@media (min-width: 1250px) {
+  html {
+    font-family: "bp-desktop-large"; } }
+
+.intro__heading {
+  font-weight: 400;
+  font-size: 28px;
+  font-size: 2.8rem;
+  line-height: 38px;
+  line-height: 3.8rem;
+  font-weight: 400;
+  letter-spacing: -0.1px;
+  font-weight: 800; }
+  @media (min-width: 768px) {
+    .intro__heading {
+      font-size: 36px;
+      font-size: 3.6rem;
+      line-height: 46px;
+      line-height: 4.6rem; } }
+
+.nav {
+  width: 100%;
+  height: 100px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); }
+  .nav__cont {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 75%;
+    height: 100%;
+    margin-right: auto;
+    margin-left: auto; }
+    @media only screen and (min-width: 992px) {
+      .nav__cont {
+        width: 40%; } }
+    .nav__cont > a {
+      display: block;
+      font-size: 24px; }
