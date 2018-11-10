@@ -1,0 +1,3 @@
+[submodule "ironclad-slider"]
+	path = ironclad-slider
+	url = https://github.com/im-ironclad/ironclad-slider.git
